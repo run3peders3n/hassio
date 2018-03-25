@@ -1,0 +1,4 @@
+- platform: template
+  sensors:
+    stue:
+      value_template: '{% if states.remote.stue_hub.state %}{{ states.remote.stue_hub.attributes.current_activity }}{% endif %}'

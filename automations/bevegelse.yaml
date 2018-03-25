@@ -1,0 +1,28 @@
+- alias: 'Turn on light when there is movement'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.aeotec_zw100_multisensor_6_sensor
+    to: 'on'
+  action:
+    service: homeassistant.turn_on
+    entity_id: switch.stuekrok_switch
+
+- alias: 'Turn off light 10 minutes after last movement'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.aeotec_zw100_multisensor_6_sensor
+    to: 'off'
+    for:
+      minutes: 10
+  action:
+    service: homeassistant.turn_off
+    entity_id: switch.stuekrok_switch
+- alias: 'bevegelse1'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.aeotec_zw100_multisensor_6_sensor
+    to: 'on'
+  action:
+    service: script.turn_on
+    data:
+      entity_id: script.test_melding

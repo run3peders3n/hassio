@@ -1,0 +1,21 @@
+- alias: 'Bod nede lys av etter 10 minutter'
+  trigger:
+    platform: state
+    entity_id: switch.bod_switch
+    to: 'on'
+    for:
+      minutes: 10
+  action:
+    service: homeassistant.turn_off
+    entity_id: switch.bod_switch
+
+- alias: 'Bod oppe lys av etter 10 minutter'
+  trigger:
+    platform: state
+    entity_id: switch.bod_oppe_bod
+    to: 'on'
+    for:
+      minutes: 10
+  action:
+    service: homeassistant.turn_off
+    entity_id: switch.bod_oppe_bod

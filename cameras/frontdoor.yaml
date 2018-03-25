@@ -1,0 +1,4 @@
+platform: mjpeg
+mjpeg_url: !secret cameraurl
+username: !secret camerauser
+password: !secret camerapass

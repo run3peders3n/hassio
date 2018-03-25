@@ -1,0 +1,21 @@
+- platform: template
+  sensors:
+    rune:
+      friendly_name_template: >-
+       {% if is_state('device_tracker.runes7_runes7', 'home') %} 
+           Hjemme
+       {% elif is_state('device_tracker.samsunggalaxys7', 'home') %}
+           Hjemme
+       {% else %}
+          {{states('device_tracker.runes7_runes7')}}
+       {% endif %}
+      value_template: >-
+       {% if is_state('device_tracker.hass_runes7', 'home') %}
+           home
+       {% elif is_state('device_tracker.samsunggalaxys7', 'home') %}
+           home
+       {% else %}
+           {{states('device_tracker.runes7_runes7')}}
+       {% endif %}
+      entity_picture_template: "https://lh3.googleusercontent.com/-Og6ufQULDWc/AAAAAAAAAAI/AAAAAAAAHHI/yk-6zSnNyzo/s60-p-rw-no/photo.jpg"
+  #unit_of_measurement: {{ "home" if is_state("device_tracker.runes7_runes7", "home") else "{{ 'home' if is_state('device_tracker.samsunggalaxys7', 'home') else 'away'}}" }}

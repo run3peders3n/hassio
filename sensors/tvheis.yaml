@@ -1,0 +1,19 @@
+- platform: mqtt
+  state_topic: "soverom/tvheis"
+  name: "Soverom luftfuktighet"
+  unit_of_measurement: "%"
+  value_template: '{{ value_json.humidity | round(1) }}'
+- platform: mqtt
+  state_topic: "soverom/tvheis"
+  name: "Soverom temperatur"
+  unit_of_measurement: "°C"
+  value_template: '{{ value_json.temperature | round(1) }}'
+- platform: mqtt
+  state_topic: "soverom/tvheis"
+  name: "temperatur føles som"
+  unit_of_measurement: "°C"
+  value_template: '{{ value_json.heatIndex | round(1) }}'
+- platform: mqtt  
+  state_topic: "soverom/tvheis"  
+  name: "Soverom PIR"  
+  value_template: '{{ value_json.motion }}' 

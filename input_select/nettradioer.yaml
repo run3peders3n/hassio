@@ -1,0 +1,27 @@
+radio_station:
+    name: 'Select Radio Station:'
+    options:
+      - Velg kanal
+      - Nrk mp3
+      - Nrk P3
+      - Energy
+      - P5 Bergen
+      - P4
+      - P8
+      - P5 Nonstop hits
+      - Club dubstep
+      - Classic vocal trance
+      - Classic trance
+      - Classic eurodance
+      - Clubsounds
+      - Dark dnb
+      - Dj mixes
+      - Dubstep
+      - Eurodance
+chromecast_radio:
+  name: 'Select Speakers:'
+  options:
+    - Livingroom
+    - Bedroom
+  initial: Livingroom
+  icon: mdi:speaker-wireless

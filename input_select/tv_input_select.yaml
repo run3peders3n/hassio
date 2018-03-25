@@ -1,0 +1,32 @@
+harmony:
+  name: Harmony
+  options:
+    - Select Input
+    - PowerOff
+    - Se på tv
+    - NETFLIX
+    - DVD
+    - Kodi
+    - Nintendo WII
+    - PC
+  icon: mdi:monitor
+kanal:
+  name: TV kanal
+  options:
+    - Velg kanal
+    - NRK1
+    - NRK2
+    - NRK3 Super
+    - TV2
+    - TVNorge
+    - TV3
+    - Max
+    - Viasat 4
+    - TV2 Zebra
+    - Fem
+    - TV6
+    - TV2 Livstil
+    - Vox
+    - VGTV
+    - Nyhetskanalen
+  icon: mdi:monitor

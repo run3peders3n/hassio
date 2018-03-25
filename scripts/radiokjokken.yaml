@@ -1,0 +1,5 @@
+radio_kjokken:
+  alias: Pinell radio kjøkken
+  sequence:
+  - service: media_player.toggle
+    entity_id: media_player.pinell_supersound_002261c2851e

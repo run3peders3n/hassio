@@ -1,0 +1,80 @@
+- alias: "harmony_update_current_status"
+  hide_entity: true
+  trigger:
+    - platform: state
+      entity_id: remote.stue_hub
+    - platform: homeassistant
+      event: start
+  action:
+    service: input_select.select_option
+    data_template:
+      entity_id: input_select.harmony
+      option: >
+        {{ states.remote.stue_hub.attributes.current_activity }}
+
+- alias: "harmony_input_select"
+  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: input_select.harmony
+  action:
+    service: script.turn_on
+    data_template:
+      entity_id: >
+        {% if is_state("input_select.harmony", "Se på tv") %}
+          script.setv
+        {%-elif is_state("input_select.harmony", "NETFLIX") %}
+          script.netflix
+        {%-elif is_state("input_select.harmony", "DVD") %}
+          script.dvd
+        {%-elif is_state("input_select.harmony", "PowerOff") %}
+          script.av
+        {%-elif is_state("input_select.harmony", "PC") %}
+          script.pc
+        {% else %}
+          none
+        {% endif %}
+#    - service: input_select.select_option
+          #    - service: input_select.select_option
+- alias: "kanal_input_select"
+  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: input_select.kanal
+  action:
+    service: script.turn_on
+    data_template:
+      entity_id: >
+        {% if is_state("input_select.kanal", "NRK1") %}
+          script.nrk1
+        {%-elif is_state("input_select.kanal", "NRK2") %}
+          script.nrk2
+        {%-elif is_state("input_select.kanal", "NRK3") %}
+          script.nrk3
+        {%-elif is_state("input_select.kanal", "TV2") %}
+          script.tv2
+        {%-elif is_state("input_select.kanal", "TVNorge") %}
+          script.tvnorge
+        {%-elif is_state("input_select.kanal", "TV3") %}
+          script.tv3
+        {%-elif is_state("input_select.kanal", "Max") %}
+          script.max
+        {%-elif is_state("input_select.kanal", "Viasat 4") %}
+          script.viasat4
+        {%-elif is_state("input_select.kanal", "TV2 Zebra") %}
+          script.tv2zebra
+        {%-elif is_state("input_select.kanal", "Fem") %}
+          script.fem
+        {%-elif is_state("input_select.kanal", "TV6") %}
+          script.tv6
+        {%-elif is_state("input_select.kanal", "TV2 Lifstil") %}
+          script.tv2livstil
+        {%-elif is_state("input_select.kanal", "Vox") %}
+          script.vox
+        {%-elif is_state("input_select.kanal", "VGTV") %}
+          script.vgtv
+        {%-elif is_state("input_select.kanal", "Nyhetskanalen") %}
+          script.nyhetskanalen
+        {% else %}
+          none
+        {% endif %}

@@ -1,0 +1,25 @@
+spotify_echo_trance:
+  alias: Trance på echo dot
+  sequence:
+  - service: media_player.select_source
+    data:
+      entity_id: media_player.spotify
+      source: rune's Echo Dot
+  - service: media_player.play_media
+    data:
+      entity_id: media_player.spotify
+      media_content_id: 'spotify:user:1196705736:playlist:5DlUG2VZtEmP3zmQtmwq85'
+      media_content_type: 'playlist'
+
+spotify_echo_rap:
+  alias: rap på echo dot
+  sequence:
+  - service: media_player.select_source
+    data:
+      entity_id: media_player.spotify
+      source: rune's Echo Dot
+  - service: media_player.play_media
+    data:
+      entity_id: media_player.spotify
+      media_content_id: 'spotify:user:1196705736:playlist:0R6y8nIe8ugAlnBpcI6lhR'
+      media_content_type: 'playlist'

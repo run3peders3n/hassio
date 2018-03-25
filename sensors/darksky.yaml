@@ -1,0 +1,15 @@
+- platform: darksky
+  api_key: !secret darkskykey
+  monitored_conditions:
+    - summary
+    - icon
+    - nearest_storm_distance
+    - temperature
+    - humidity
+    - precip_probability
+    - precip_intensity
+    - wind_speed
+    - pressure
+    - wind_bearing
+    - apparent_temperature
+  update_inverval: 5

@@ -1,0 +1,7 @@
+nettradio:
+  name: Nett Radio
+  entities:
+  - input_select.radio_station
+  - input_select.chromecast_radio
+  - script.radio538
+  - input_number.volum_nettradio

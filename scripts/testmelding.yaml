@@ -1,0 +1,8 @@
+test_melding:
+  sequence:
+    - service: notify.phones
+      data:
+        title: "Home Assistant"
+        message: "Bevegelse"
+        target: S7
+        data: {"icon": "https://goo.gl/xeetdy", "vibration": "0,65,706,86,657,95,668,100"}

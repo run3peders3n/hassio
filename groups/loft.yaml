@@ -1,0 +1,48 @@
+Loft_view:
+  name: Loft
+  view: yes
+  entities:
+    - group.Loft
+    - sensor.weather_symbol
+    - device_tracker.888717b8177e
+    - device_tracker.desktop5vkjgq6
+    - sun.sun
+    - binary_sensor.loftstue
+    - sensor.loftstue_humidity
+    - group.loft_info
+loft_info:
+  name: Info
+  entities:
+    - sensor.bod_oppe_energy
+    - sensor.bod_oppe_power
+    - sensor.bod_oppe_previous_reading
+    - sensor.stort_soverom_oppe_alarm_level
+    - sensor.stort_soverom_oppe_alarm_type
+    - sensor.stort_soverom_oppe_energy
+    - sensor.stort_soverom_oppe_exporting
+    - sensor.stort_soverom_oppe_heat
+    - sensor.stort_soverom_oppe_power
+    - sensor.stort_soverom_oppe_power_management
+    - sensor.stort_soverom_oppe_sourcenodeid
+    - sensor.loftstue_alarm_level
+    - sensor.loftstue_alarm_type
+    - sensor.loftstue_energy
+    - sensor.loftstue_exporting
+    - sensor.loftstue_power
+    - sensor.loftstue_power_management
+    - sensor.loftstue_sourcenodeid
+    - sensor.loftstue_temperature
+    - sensor.lite_soverom_oppe_alarm_level
+    - sensor.lite_soverom_oppe_alarm_type
+    - sensor.lite_soverom_oppe_energy
+    - sensor.lite_soverom_oppe_exporting
+    - sensor.lite_soverom_oppe_interval
+    - sensor.lite_soverom_oppe_power
+    - sensor.lite_soverom_oppe_previous_reading
+Loft:
+  name: Loft
+  entities:
+    - switch.bod_oppe_bod
+    - switch.lite_soverom_oppe_switch
+    - switch.loftstue_switch
+    - switch.stort_soverom_oppe_switch

@@ -1,0 +1,282 @@
+#scripts.yaml:
+living_room_tv_up:
+#  hide_entity: true
+  alias: Living Room TV Up
+  sequence:
+    - service: remote.send_command
+      data_template:
+        entity_id: remote.stue_hub
+        device: 47040531
+        command: VolumeUp
+    - service: remote.send_command
+      data_template:
+        entity_id: remote.stue_hub
+        device: 47040531
+        command: VolumeUp
+    - service: remote.send_command
+      data_template:
+        entity_id: remote.stue_hub
+        device: 47040531
+        command: VolumeUp
+    - service: remote.send_command
+      data_template:
+        entity_id: remote.stue_hub
+        device: 47040531
+        command: VolumeUp
+    - service: remote.send_command
+      data_template:
+        entity_id: remote.stue_hub
+        device: 47040531
+        command: VolumeUp
+
+living_room_tv_down:
+  alias: Living Room TV Down
+  sequence:
+    - service: remote.send_command
+      data_template:
+        entity_id: remote.stue_hub
+        device: 47040531
+        command: VolumeDown
+    - service: remote.send_command
+      data_template:
+        entity_id: remote.stue_hub
+        device: 47040531
+        command: VolumeDown
+    - service: remote.send_command
+      data_template:
+        entity_id: remote.stue_hub
+        device: 47040531
+        command: VolumeDown
+    - service: remote.send_command
+      data_template:
+        entity_id: remote.stue_hub
+        device: 47040531
+        command: VolumeDown
+    - service: remote.send_command
+      data_template:
+        entity_id: remote.stue_hub
+        device: 47040531
+        command: VolumeDown
+
+living_room_tv_mute:
+  alias: Living Room TV Mute
+  sequence:
+    - service: remote.send_command
+      data_template:
+        entity_id: remote.stue_hub
+        device: 47040531
+        command: Mute
+        
+setv:
+  sequence:
+  - service: remote.turn_on
+    entity_id: remote.stue_hub
+    data:
+      activity: "28016331"
+
+netflix:
+  sequence:
+  - service: remote.turn_on
+    entity_id: remote.stue_hub
+    data:
+      activity: "28016337"
+
+dvd:
+  sequence:
+  - service: remote.turn_on
+    entity_id: remote.stue_hub
+    data:
+      activity: "28016332"
+
+pc:
+  sequence:
+  - service: remote.turn_on
+    entity_id: remote.stue_hub
+    data:
+      activity: "28016336"
+av:
+  sequence:
+  - service: remote.turn_off
+    entity_id: remote.stue_hub
+nrk1:
+  alias: Nrk1
+  sequence:
+  - service: remote.send_command
+    data_template:
+      entity_id: remote.stue_hub
+      device: 47040532
+      command: 1
+nrk2:
+  alias: Nrk2
+  sequence:
+  - service: remote.send_command
+    data_template:
+      entity_id: remote.stue_hub
+      device: 47040532
+      command: 2
+nrk3:
+  alias: Nrk3
+  sequence:
+  - service: remote.send_command
+    data_template:
+      entity_id: remote.stue_hub
+      device: 47040532
+      command: 3
+tv2:
+  alias: tv2
+  sequence:
+  - service: remote.send_command
+    data_template:
+      entity_id: remote.stue_hub
+      device: 47040532
+      command: 5
+tvnorge:
+  alias: TV Norge
+  sequence:
+  - service: remote.send_command
+    data_template:
+      entity_id: remote.stue_hub
+      device: 47040532
+      command: 6
+tv3:
+  alias: TV3
+  sequence:
+  - service: remote.send_command
+    data_template:
+      entity_id: remote.stue_hub
+      device: 47040532
+      command: 7
+max:
+  alias: Max
+  sequence:
+  - service: remote.send_command
+    data_template:
+      entity_id: remote.stue_hub
+      device: 47040532
+      command: 8
+viasat4:
+  alias: Viasat 4
+  sequence:
+  - service: remote.send_command
+    data_template:
+      entity_id: remote.stue_hub
+      device: 47040532
+      command: 9
+
+tv2zebra:
+  alias: TV2 Zebra
+  sequence:
+  - service: remote.send_command
+    data_template:
+      entity_id: remote.stue_hub
+      device: 47040532
+      command: 1
+  - service: remote.send_command
+    data_template:
+      entity_id: remote.stue_hub
+      device: 47040532
+      command: 0
+fem:
+  alias: Fem
+  sequence:
+  - service: remote.send_command
+    data_template:
+      entity_id: remote.stue_hub
+      device: 47040532
+      command: 1
+  - service: remote.send_command
+    data_template:
+      entity_id: remote.stue_hub
+      device: 47040532
+      command: 2
+tv6:
+  alias: TV6
+  sequence:
+  - service: remote.send_command
+    data_template:
+      entity_id: remote.stue_hub
+      device: 47040532
+      command: 1
+  - service: remote.send_command
+    data_template:
+      entity_id: remote.stue_hub
+      device: 47040532
+      command: 3
+tv2livstil:
+  alias: TV2 Livstil
+  sequence:
+  - service: remote.send_command
+    data_template:
+      entity_id: remote.stue_hub
+      device: 47040532
+      command: 1
+  - service: remote.send_command
+    data_template:
+      entity_id: remote.stue_hub
+      device: 47040532
+      command: 4
+vox:
+  alias: VOX HD
+  sequence:
+  - service: remote.send_command
+    data_template:
+      entity_id: remote.stue_hub
+      device: 47040532
+      command: 1
+  - service: remote.send_command
+    data_template:
+      entity_id: remote.stue_hub
+      device: 47040532
+      command: 6
+vgtv:
+  alias: VG TV
+  sequence:
+  - service: remote.send_command
+    data_template:
+      entity_id: remote.stue_hub
+      device: 47040532
+      command: 1
+  - service: remote.send_command
+    data_template:
+      entity_id: remote.stue_hub
+      device: 47040532
+      command: 7
+nyhetskanalen:
+  alias: TV2 Nyhetskanalen
+  sequence:
+  - service: remote.send_command
+    data_template:
+      entity_id: remote.stue_hub
+      device: 47040532
+      command: 1
+  - service: remote.send_command
+    data_template:
+      entity_id: remote.stue_hub
+      device: 47040532
+      command: 8
+
+info:
+  alias: Info test
+  sequence:
+  - service: remote.send_command
+    entity_id: remote.stue_hub
+    data:
+      device: "47040532"
+      command: "info"
+
+kanal_opp:
+  alias: Tv kanal opp
+  sequence:
+  - service: remote.send_command
+    data_template:
+      entity_id: remote.stue_hub
+      device: 47040532
+      command: ChannelUp
+kanal_ned:
+  alias: Tv kanal opp
+  sequence:
+  - service: remote.send_command
+    data_template:
+      entity_id: remote.stue_hub
+      device: 47040532
+      command: ChannelDown

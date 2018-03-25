@@ -1,0 +1,40 @@
+radio538:
+   alias: Play Radio on Chromecast Audio
+   sequence:
+#      - service: media_player.volume_set
+#        data:
+#          entity_id: media_player.ca_hall
+#          volume_level: '0.35'
+#      -  service: media_player.volume_set
+#         data:
+#           entity_id: media_player.ca_bathroom
+#           volume_level: '0.20'
+#      -  service: media_player.volume_set
+#         data:
+#           entity_id: media_player.ca_livingroom
+#           volume_level: '0.30'
+     -  service: media_player.play_media
+        data_template:
+          entity_id: >
+           {% if is_state("input_select.chromecast_radio", "Livingroom") %} media_player.living_room_speaker
+           {% elif is_state("input_select.chromecast_radio", "Bedroom") %} media_player.bedroom_speaker
+           {% endif %}
+          media_content_id: >
+           {% if is_state("input_select.radio_station", "Nrk mp3") %} http://nrk-mms-live.telenorcdn.net/nrk_radio_mp3_mp3_h
+           {% elif is_state("input_select.radio_station", "Nrk P3") %} http://nrk-mms-live.telenorcdn.net/nrk_radio_p3_mp3_h
+           {% elif is_state("input_select.radio_station", "Energy") %} http://stream.p4.no/nrj_mp3_hq
+           {% elif is_state("input_select.radio_station", "P5 Bergen") %} http://stream.p4.no/p5bergen_mp3_hq
+           {% elif is_state("input_select.radio_station", "P4") %} http://stream.p4.no/p4_mp3_hq
+           {% elif is_state("input_select.radio_station", "P8") %} http://stream.p4.no/p8_mp3_hq
+           {% elif is_state("input_select.radio_station", "P5 Nonstop hits") %} http://stream.p4.no/p5nonstophits_mp3_hq
+           {% elif is_state("input_select.radio_station", "Club dubstep") %} http://pub1.diforfree.org:8000/di_clubdubstep_hi
+           {% elif is_state("input_select.radio_station", "Classic vocal trance") %} http://pub1.diforfree.org:8000/di_classicvocaltrance_hi
+           {% elif is_state("input_select.radio_station", "Classic trance") %} http://pub1.diforfree.org:8000/di_classictrance_hi
+           {% elif is_state("input_select.radio_station", "Classic eurodance") %} http://pub1.diforfree.org:8000/di_classiceurodance_hi
+           {% elif is_state("input_select.radio_station", "Clubsounds") %} http://pub1.diforfree.org:8000/di_clubsounds_hi
+           {% elif is_state("input_select.radio_station", "Dark dnb") %} http://pub1.diforfree.org:8000/di_darkdnb_hi
+           {% elif is_state("input_select.radio_station", "Dj mixes") %} http://pub1.diforfree.org:8000/di_djmixes_hi
+           {% elif is_state("input_select.radio_station", "Dubstep") %} http://pub1.diforfree.org:8000/di_dubstep_hi
+           {% elif is_state("input_select.radio_station", "Eurodance") %} http://pub1.diforfree.org:8000/di_eurodance_hi
+           {% endif %}
+          media_content_type: 'audio/mp4' 

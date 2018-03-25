@@ -1,0 +1,12 @@
+- platform: template
+  sensors:
+    floorplan_date:
+      friendly_name: 'Date'
+      value_template: >-
+        {{now().strftime("%d")}}:{{now().strftime("%m")}}:{{now().strftime("%Y")}}
+- platform: template
+  sensors:
+    floorplan_time:
+      friendly_name: 'Time'
+      value_template: >-
+        {{now().strftime("%H")}}:{{now().strftime("%M")}}

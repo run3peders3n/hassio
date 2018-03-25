@@ -1,0 +1,4 @@
+platform: hikvision
+host: !secret cameraurlip
+username: !secret camerauser
+password: !secret camerapass

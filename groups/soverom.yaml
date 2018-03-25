@@ -1,0 +1,56 @@
+Soverom_view:
+  name: Soverom
+  view: yes
+  entities:
+    - group.Soverom
+    - group.Soveromkristoffer
+    - sensor.weather_symbol
+    - sun.sun
+    - device_tracker.esp_8bc94a
+    - device_tracker.googlehome
+    - media_player.bedroom_speaker
+    - group.soverom_info
+soverom_info:
+  name: Info
+  entities:
+    - sensor.dimmer_soverom_current
+    - sensor.dimmer_soverom_energy
+    - sensor.dimmer_soverom_power
+    - sensor.dimmer_soverom_previous_reading
+    - sensor.dimmer_soverom_voltage
+    - sensor.fibaro_system_fgsd002_smoke_sensor_alarm_level
+    - sensor.fibaro_system_fgsd002_smoke_sensor_alarm_type
+    - sensor.fibaro_system_fgsd002_smoke_sensor_burglar
+    - sensor.fibaro_system_fgsd002_smoke_sensor_general
+    - sensor.fibaro_system_fgsd002_smoke_sensor_heat
+    - sensor.fibaro_system_fgsd002_smoke_sensor_heat_2
+    - sensor.fibaro_system_fgsd002_smoke_sensor_power_management
+    - sensor.fibaro_system_fgsd002_smoke_sensor_smoke
+    - sensor.fibaro_system_fgsd002_smoke_sensor_smoke_2
+    - sensor.fibaro_system_fgsd002_smoke_sensor_sourcenodeid
+    - sensor.fibaro_system_fgsd002_smoke_sensor_system
+    - sensor.fibaro_system_fgsd002_smoke_sensor_temperature
+    - sensor.nattlampe_rune_current
+    - sensor.nattlampe_rune_energy
+    - sensor.nattlampe_rune_power
+    - sensor.nattlampe_rune_previous_reading
+    - sensor.nattlampe_rune_voltage
+    - sensor.soverom_kristoffer_alarm_level
+    - sensor.soverom_kristoffer_alarm_type
+    - sensor.soverom_kristoffer_energy
+    - sensor.soverom_kristoffer_exporting
+    - sensor.soverom_kristoffer_heat
+    - sensor.soverom_kristoffer_power
+    - sensor.soverom_kristoffer_power_management
+    - sensor.soverom_kristoffer_sourcenodeid
+    
+    
+Soverom:
+  name: Soverom
+  entities:
+    - light.dimmer_soverom_takdimmersoverom
+    - light.nattlampe_rune_nattlamperune
+Soveromkristoffer:
+  name: Soverom Kristoffer
+  entities:
+   - switch.soverom_kristoffer_switch

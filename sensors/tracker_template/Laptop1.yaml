@@ -1,0 +1,23 @@
+#laptop bente
+#device_tracker.laptop_2
+#device_tracker.laptop
+- platform: template
+  sensors:
+    rune:
+      friendly_name_template: >-
+       {% if is_state('device_tracker.device_tracker.laptop_2', 'home') %} 
+           Laptop
+       {% elif is_state('device_tracker.device_tracker.laptop', 'home') %}
+           Laptop
+       {% else %}
+          Laptop
+       {% endif %}
+      value_template: >-
+       {% if is_state('device_tracker.device_tracker.laptop', 'home') %}
+           Online
+       {% elif is_state('device_tracker.device_tracker.laptop_2', 'home') %}
+           Online
+       {% else %}
+           Offline
+       {% endif %}
+  

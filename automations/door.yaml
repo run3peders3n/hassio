@@ -1,0 +1,10 @@
+- alias: 'altandør oppe'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.loftstue
+    to: 'on'
+  action: 
+    service: persistent_notification.create
+    data:
+      message: "dør åpnet"
+      title: "test"

@@ -1,0 +1,34 @@
+Kjokken_view:
+  name: Kjokken
+  view: yes
+  entities:
+    - group.kjokken
+    - group.meida_kjokken
+    - device_tracker.002261c2851e
+    - sensor.kjkken_temperature
+    - sensor.weather_symbol
+    - sun.sun
+    - group.info_kjokken
+  
+kjokken:
+  name: kjokken
+  entities:
+    - switch.fibaro_system_fgs223_double_relay_kjkkenbord
+    - switch.fibaro_system_fgs223_double_relay_kjkkentak
+    - switch.kjkken_skap_og_benk_kjkkenbenk
+    - switch.kjkken_skap_og_benk_kjkkenskap
+meida_kjokken:
+  name: Media
+  entities:
+    - media_player.pinell_supersound_002261c2851e
+info_kjokken:
+  name: Info
+  entities:
+    - sensor.fibaro_system_fgs223_double_relay_alarm_level
+    - sensor.fibaro_system_fgs223_double_relay_alarm_type
+    - sensor.fibaro_system_fgs223_double_relay_energy
+    - sensor.fibaro_system_fgs223_double_relay_exporting
+    - sensor.fibaro_system_fgs223_double_relay_heat
+    - sensor.fibaro_system_fgs223_double_relay_power
+    - sensor.fibaro_system_fgs223_double_relay_power_management
+    - sensor.fibaro_system_fgs223_double_relay_sourcenodeid
